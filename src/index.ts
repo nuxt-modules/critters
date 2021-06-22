@@ -26,5 +26,9 @@ export default defineNuxtModule({
     nuxt.hook('render:route', async (_url, result) => {
       result.html = await critters.process(result.html)
     })
+
+    nuxt.hook('generate:page', async (result) => {
+      result.html = await critters.process(result.html)
+    })
   }
 })
