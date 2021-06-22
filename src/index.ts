@@ -19,7 +19,7 @@ export default defineNuxtModule({
       preload: options.preload,
     })
 
-    // ٍEnable css extraction
+    // Enable css extraction
     nuxt.options.build.extractCSS = true
 
     // Add transform step
