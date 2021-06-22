@@ -1,0 +1,59 @@
+{
+  "name": "@nuxtjs/critters",
+  "version": "0.1.0",
+  "description": "Critical CSS for Nuxt.js",
+  "keywords": [
+    "nuxt",
+    "module",
+    "nuxt-module"
+  ],
+  "repository": "nuxt-community/critters-module",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "siroc build",
+    "dev": "nuxt example",
+    "lint": "eslint --ext .js,.ts,.vue",
+    "lint:all": "yarn lint .",
+    "prepare": "husky install && yarn build",
+    "release": "yarn test && release-it",
+    "test": "yarn lint && yarn build"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^0.6.3",
+    "critters": "^0.0.10",
+    "upath": "^2.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "7.14.5",
+    "@babel/preset-env": "7.14.5",
+    "@babel/preset-typescript": "7.14.5",
+    "@nuxt/test-utils": "0.2.2",
+    "@nuxt/types": "2.15.7",
+    "@nuxtjs/eslint-config-typescript": "6.0.1",
+    "@release-it/conventional-changelog": "3.0.1",
+    "@types/jest": "26.0.23",
+    "babel-eslint": "latest",
+    "babel-jest": "27.0.2",
+    "eslint": "7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "6.0.0",
+    "jest": "27.0.4",
+    "lint-staged": "11.0.0",
+    "nuxt-edge": "2.16.0-27063376.35c6ac41",
+    "release-it": "14.9.0",
+    "siroc": "0.11.0"
+  },
+  "peerDependencies": {
+    "chalk": "^3.0.0 || ^4.0.0",
+    "consola": "^2.15.0",
+    "prettier": "^2.1.2"
+  },
+  "pvolta": {
+    "node": "12.22.1"
+  }
+}
