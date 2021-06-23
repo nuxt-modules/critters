@@ -1360,7 +1360,7 @@
     node-html-parser "^3.3.4"
     ufo "^0.7.5"
 
-"@nuxt/kit@^0.6.3":
+"@nuxt/kit@0.6.3":
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-0.6.3.tgz#939961a1c5614701b06f6df18250bd1116897b47"
   integrity sha512-ktfXwCsbFQIXhWlcu3pReWizdvwYZpKOeDbmy3D8XUcgdHraHoAxD1zl1xJblejlVbTlQX6ZoEfVTrNmroC0Vg==
@@ -4185,7 +4185,7 @@ create-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
   integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
 
-critters@^0.0.10:
+critters@0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/critters/-/critters-0.0.10.tgz#edd0e962fc5af6c4adb6dbf1a71bae2d3f917000"
   integrity sha512-p5VKhP1803+f+0Jq5P03w1SbiHtpAKm+1EpJHkiPxQPq0Vu9QLZHviJ02GRrWi0dlcJqrmzMWInbwp4d22RsGw==
@@ -11864,15 +11864,15 @@ untyped@^0.2.5:
   resolved "https://registry.yarnpkg.com/untyped/-/untyped-0.2.5.tgz#0464bb73509d8f1078eb7a70dacb67fa92cfed53"
   integrity sha512-VYYchiYP9EUXISmErn1aFzhikpWhxSic8IsJzPDEZ/MyezenSDhNua0YHh9jY/54aDlv0G4yjPThEr+tXZA7SA==
 
+upath@2.0.1, upath@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/upath/-/upath-2.0.1.tgz#50c73dea68d6f6b990f51d279ce6081665d61a8b"
+  integrity sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==
+
 upath@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.2.0.tgz#8f66dbcd55a883acdae4408af8b035a5044c1894"
   integrity sha512-aZwGpamFO61g3OlfT7OQCHqhGnW43ieH9WZeP7QxN/G/jS4jfqUkZxoryvJgVPEcrl5NL/ggHsSmLMHuH64Lhg==
-
-upath@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/upath/-/upath-2.0.1.tgz#50c73dea68d6f6b990f51d279ce6081665d61a8b"
-  integrity sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==
 
 update-notifier@5.1.0:
   version "5.1.0"
