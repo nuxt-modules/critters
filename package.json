@@ -24,7 +24,7 @@
     "test": "yarn lint && yarn build"
   },
   "dependencies": {
-    "@nuxt/kit": "0.6.3",
+    "@nuxt/kit": "0.6.4",
     "critters": "0.0.10",
     "upath": "2.0.1"
   },
