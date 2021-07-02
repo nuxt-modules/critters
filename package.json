@@ -41,11 +41,11 @@
     "babel-jest": "27.0.6",
     "eslint": "7.29.0",
     "eslint-config-prettier": "8.3.0",
-    "husky": "6.0.0",
+    "husky": "7.0.0",
     "jest": "27.0.6",
     "lint-staged": "11.0.0",
-    "nuxt-edge": "2.16.0-27063376.35c6ac41",
-    "release-it": "14.9.0",
+    "nuxt-edge": "2.16.0-27086413.20f481f6",
+    "release-it": "14.10.0",
     "siroc": "0.11.1"
   },
   "peerDependencies": {
