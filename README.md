@@ -40,6 +40,22 @@ Nuxt has a number of ways to optimize your CSS in production:
 2. 📦 You can enable [`purgecss`](https://github.com/Developmint/nuxt-purgecss) to remove unused CSS rules from your bundle.
 3. ✅ with `@nuxtjs/critters` you can now extract CSS files and load them separately, just inlining the CSS necessary to render the page.
 
+## Options
+
+You can override the `@nuxtjs/critters` defaults like this:
+```js
+// nuxt.config.js
+export default {
+  critters: {
+    // Options passed directly to critters: https://github.com/GoogleChromeLabs/critters#critters-2
+    config: {
+      // Default: 'media'
+      preload: 'swap'
+    }
+  }
+}
+```
+
 ## Development
 
 1. Clone this repository
