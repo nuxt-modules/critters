@@ -4,8 +4,12 @@ import Critters from 'critters'
 
 export default defineNuxtModule({
   name: 'critters',
-  options: {
-    preload: 'media'
+  configKey: 'critters',
+  defaults: {
+    // Options passed directly to `critters`
+    config: {
+      preload: 'media' as 'media' | 'body' | 'swap' | 'js' | 'js-lazy'
+    }
   },
   setup (options, nuxt) {
     // Only enable for production
@@ -16,7 +20,7 @@ export default defineNuxtModule({
     const critters = new Critters({
       path: resolve(nuxt.options.buildDir, 'dist/client'),
       publicPath: nuxt.options.build.publicPath,
-      preload: options.preload,
+      ...options.config,
     })
 
     // Enable css extraction
