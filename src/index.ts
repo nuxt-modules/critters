@@ -8,7 +8,7 @@ export default defineNuxtModule({
   defaults: {
     // Options passed directly to `critters`
     config: {
-      preload: 'media'
+      preload: 'media' as 'media' | 'body' | 'swap' | 'js' | 'js-lazy'
     }
   },
   setup (options, nuxt) {
@@ -20,9 +20,6 @@ export default defineNuxtModule({
     const critters = new Critters({
       path: resolve(nuxt.options.buildDir, 'dist/client'),
       publicPath: nuxt.options.build.publicPath,
-      // For backwards-compatibility
-      // @ts-ignore
-      preload: options.preload,
       ...options.config,
     })
 
