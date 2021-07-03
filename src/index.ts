@@ -5,7 +5,7 @@ import Critters from 'critters'
 export default defineNuxtModule({
   name: 'critters',
   configKey: 'critters',
-  options: {
+  defaults: {
     // Options passed directly to `critters`
     config: {
       preload: 'media'
@@ -21,6 +21,7 @@ export default defineNuxtModule({
       path: resolve(nuxt.options.buildDir, 'dist/client'),
       publicPath: nuxt.options.build.publicPath,
       // For backwards-compatibility
+      // @ts-ignore
       preload: options.preload,
       ...options.config,
     })
