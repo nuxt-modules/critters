@@ -1,3 +1,10 @@
+## [0.2.0](https://github.com/nuxt-community/critters-module/compare/0.1.2...0.2.0) (2021-07-13)
+
+
+### Features
+
+* add configuration typing ([2214ad0](https://github.com/nuxt-community/critters-module/commit/2214ad07ad3ca1c5ded157a68dda61c161d09817))
+
 ### [0.1.2](https://github.com/nuxt-community/critters-module/compare/0.1.1...0.1.2) (2021-07-03)
 
 
