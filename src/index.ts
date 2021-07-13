@@ -1,14 +1,20 @@
 import { defineNuxtModule } from '@nuxt/kit'
 import { resolve } from 'upath'
-import Critters from 'critters'
+import Critters, { Options } from 'critters'
 
-export default defineNuxtModule({
+const configKey = 'critters'
+
+interface CrittersModuleOptions {
+  config?: Options
+}
+
+export default defineNuxtModule<CrittersModuleOptions>({
   name: 'critters',
-  configKey: 'critters',
+  configKey,
   defaults: {
     // Options passed directly to `critters`
     config: {
-      preload: 'media' as 'media' | 'body' | 'swap' | 'js' | 'js-lazy'
+      preload: 'media'
     }
   },
   setup (options, nuxt) {
@@ -36,3 +42,20 @@ export default defineNuxtModule({
     })
   }
 })
+
+declare module '@nuxt/types' {
+  // Nuxt 2.14+
+  interface NuxtOptions {
+    [configKey]: CrittersModuleOptions
+  }
+  // Nuxt 2.9 - 2.13
+  interface Configuration {
+    [configKey]: CrittersModuleOptions
+  }
+}
+
+declare module '@nuxt/kit' {
+  interface NuxtConfig {
+    [configKey]: CrittersModuleOptions
+  }
+}
