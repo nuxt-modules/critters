@@ -1,8 +1,8 @@
-import { setupTest, get, getNuxt, generate } from '@nuxt/test-utils'
+import { setupTest, get, getNuxt } from '@nuxt/test-utils'
 import { resolve } from 'upath'
 import { readFile } from 'fs-extra'
 
-const rootDir = resolve(__dirname, '../example')
+const rootDir = './example'
 
 describe('module in server', () => {
   setupTest({
@@ -23,8 +23,7 @@ describe('module in server', () => {
   })
 })
 
-// TODO:
-describe.skip('module in generated pages', () => {
+describe('module in generated pages', () => {
   setupTest({
     rootDir,
     generate: true,
@@ -34,10 +33,7 @@ describe.skip('module in generated pages', () => {
   })
 
   it('enables extractCSS', async () => {
-    const nuxt = getNuxt()
-    const generatePath = nuxt.options.generate.dir
-    await generate()
-    const body = await readFile(join(generatePath, 'index.html'), 'utf-8')
+    const body = await readFile(resolve(rootDir, 'dist/index.html'), 'utf-8')
     expect(body).toContain('<style>')
     expect(body).toContain('.sample-class')
     expect(body).not.toContain('.sample-unused-class')
