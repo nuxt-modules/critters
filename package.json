@@ -21,7 +21,7 @@
     "lint:all": "yarn lint .",
     "prepare": "husky install && yarn build",
     "release": "yarn test && release-it",
-    "test": "yarn lint && yarn build"
+    "test": "yarn lint && yarn jest"
   },
   "dependencies": {
     "@nuxt/kit": "0.6.4",
