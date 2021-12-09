@@ -44,7 +44,7 @@
     "husky": "7.0.4",
     "jest": "27.2.5",
     "lint-staged": "11.2.6",
-    "nuxt-edge": "2.16.0-27292334.ab1c6cb4",
+    "nuxt-edge": "2.16.0-27315376.ab1c6cb4",
     "release-it": "14.11.8",
     "siroc": "0.16.0"
   },
