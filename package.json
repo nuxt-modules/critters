@@ -41,7 +41,7 @@
     "babel-jest": "27.5.1",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.5.0",
-    "husky": "7.0.4",
+    "husky": "8.0.1",
     "jest": "27.5.1",
     "lint-staged": "11.2.6",
     "nuxt-edge": "2.16.0-27358576.777a4b7f",
