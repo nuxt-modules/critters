@@ -6,5 +6,6 @@ module.exports = {
     curly: 'off',
     'no-empty': 'off',
     'no-undef': 'off',
+    'vue/multi-word-component-names': 'off',
   },
 }
