@@ -7,20 +7,13 @@ import { describe, it, expect } from 'vitest'
 await setup({
   rootDir: fileURLToPath(new URL('../playground', import.meta.url).href),
   build: true,
-  nuxtConfig: {
-    nitro: {
-      prerender: {
-        routes: ['/'],
-      },
-    },
-  },
 })
 
 describe('module in generated pages', () => {
   it('enables extractCSS', async () => {
     const ctx = useTestContext()
     const body = await fsp.readFile(
-      resolve(ctx.nuxt!.options.generate.dir || '', 'index.html'),
+      resolve(ctx.nuxt!.options.nitro.output?.dir || '', 'public/index.html'),
       'utf-8'
     )
     expect(body).toContain('<style>')
