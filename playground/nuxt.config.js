@@ -1,4 +1,4 @@
 export default {
-  modules: ['../src/index.ts'],
+  modules: ['@nuxtjs/critters'],
   css: ['~/styles/global.css'],
 }

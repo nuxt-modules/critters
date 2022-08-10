@@ -13,6 +13,7 @@
 - Zero-configuration required
 - Enables CSS Extraction
 - Critical CSS automatically injected to page
+- Works with Nitro prerendering
 
 ## Quick setup
 
@@ -36,24 +37,27 @@ yarn add @nuxtjs/critters # or npm install @nuxtjs/critters
 
 Nuxt has a number of ways to optimize your CSS in production:
 
-1. ✅ Nuxt uses [`cssnano`](https://cssnano.co/) at the build step to minify CSS rules
+1. ✅ Nuxt uses [`cssnano`](https://cssnano.co/) in the build step to minify CSS rules
 2. 📦 You can enable [`purgecss`](https://github.com/Developmint/nuxt-purgecss) to remove unused CSS rules from your bundle.
 3. ✅ with `@nuxtjs/critters` you can now extract CSS files and load them separately, just inlining the CSS necessary to render the page.
 
 ## Options
 
 You can override the `@nuxtjs/critters` defaults like this:
+
 ```js
 // nuxt.config.js
-export default {
+import { defineNuxtConfig } from 'nuxt'
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/critters'],
   critters: {
     // Options passed directly to critters: https://github.com/GoogleChromeLabs/critters#critters-2
     config: {
       // Default: 'media'
-      preload: 'swap'
-    }
-  }
-}
+      preload: 'swap',
+    },
+  },
+})
 ```
 
 ## Development
@@ -67,17 +71,14 @@ export default {
 [MIT License](./LICENSE)
 
 <!-- Badges -->
+
 [npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/critters/latest.svg
 [npm-version-href]: https://npmjs.com/package/@nuxtjs/critters
-
 [npm-downloads-src]: https://img.shields.io/npm/dm/@nuxtjs/critters.svg
 [npm-downloads-href]: https://npmjs.com/package/@nuxtjs/critters
-
 [github-actions-ci-src]: https://github.com/nuxt-community/critters-module/workflows/ci/badge.svg
 [github-actions-ci-href]: https://github.com/nuxt-community/critters-module/actions?query=workflow%3Aci
-
 [codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/critters-module.svg
 [codecov-href]: https://codecov.io/gh/nuxt-community/critters-module
-
 [license-src]: https://img.shields.io/npm/l/@nuxtjs/critters.svg
 [license-href]: https://npmjs.com/package/@nuxtjs/critters
