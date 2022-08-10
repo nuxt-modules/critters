@@ -38,6 +38,7 @@ export default defineNuxtModule<ModuleOptions>({
       })
     })
 
+    /* c8 ignore start */
     if (isNuxt2()) {
       const critters = new Critters({
         path: resolve(nuxt.options.buildDir, 'dist/client'),
