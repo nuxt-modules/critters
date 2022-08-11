@@ -29,7 +29,6 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "lint": "eslint --ext .js,.ts,.vue",
     "lint:all": "yarn lint .",
-    "prepare": "husky install && yarn dev:prepare",
     "release": "yarn test && release-it",
     "test": "yarn vitest run --no-threads"
   },
