@@ -470,12 +470,12 @@
     unimport "^0.4.5"
     untyped "^0.4.4"
 
-"@nuxt/kit@^3.0.0-rc.7":
-  version "3.0.0-rc.7"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0-rc.7.tgz#76307b44072cf5d4a50e31953ac0a6101523a897"
-  integrity sha512-94Yi7z28NbWDOg0SQGa55jlB3VsquzOjOW0pV2rqbGQ35kxxi/2LHbmUII0cHsopYMjKcgylVspd0isKnsGyFw==
+"@nuxt/kit@3.0.0-rc.8":
+  version "3.0.0-rc.8"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0-rc.8.tgz#e65e739e986abf5bfe99fa44a3bf44bacc66a35a"
+  integrity sha512-FkbO7DPkJxuLqeiWEMUI8OWXaQ4qzmreIjslIPrc9buYdB9nbJqVVzQRicxcKzF09R7VwpJTiG6onIZq6iGuDQ==
   dependencies:
-    "@nuxt/schema" "3.0.0-rc.7"
+    "@nuxt/schema" "3.0.0-rc.8"
     c12 "^0.2.9"
     consola "^2.15.3"
     defu "^6.0.0"
@@ -485,7 +485,7 @@
     jiti "^1.14.0"
     knitwork "^0.1.2"
     lodash.template "^4.5.0"
-    mlly "^0.5.10"
+    mlly "^0.5.12"
     pathe "^0.3.4"
     pkg-types "^0.3.3"
     scule "^0.3.2"
@@ -529,7 +529,23 @@
     pathe "^0.2.0"
     unbuild "^0.6.7"
 
-"@nuxt/schema@3.0.0-rc.7", "@nuxt/schema@^3.0.0-rc.6":
+"@nuxt/schema@3.0.0-rc.8":
+  version "3.0.0-rc.8"
+  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.0.0-rc.8.tgz#d8fab177f4b58fcdb83bd530a887d3b4acea90b7"
+  integrity sha512-ODl9cmjH8fupvXjzITIvYT4OzapNvLrvWq9QUUgLhgv3Uxl2iX2J03oLj2aCQgfhte4mJhgHsBrtXvDLF/1GwA==
+  dependencies:
+    c12 "^0.2.9"
+    create-require "^1.1.1"
+    defu "^6.0.0"
+    jiti "^1.14.0"
+    pathe "^0.3.4"
+    postcss-import-resolver "^2.0.0"
+    scule "^0.3.2"
+    std-env "^3.1.1"
+    ufo "^0.8.5"
+    unimport "^0.6.7"
+
+"@nuxt/schema@^3.0.0-rc.6":
   version "3.0.0-rc.7"
   resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.0.0-rc.7.tgz#86d904b24f8fd4d068f686ce7bbf2cb2d0560ba5"
   integrity sha512-3UherrSHjQFegDDQNAzXlHuRAIAFPqCP3qVj0ShFxzWwws2lSYqvDjVYHHZ8HalRgpfz/lTgQnw5YnN9i3VRlw==
@@ -646,7 +662,6 @@
 
 "@nuxtjs/critters@link:./":
   version "0.0.0"
-  uid ""
 
 "@nuxtjs/eslint-config-typescript@latest":
   version "10.0.0"
@@ -5201,6 +5216,16 @@ mlly@^0.5.10, mlly@^0.5.2, mlly@^0.5.3, mlly@^0.5.4, mlly@^0.5.5, mlly@^0.5.7:
   version "0.5.10"
   resolved "https://registry.yarnpkg.com/mlly/-/mlly-0.5.10.tgz#4d5bdce6f9531392846cfde6257e1a45bc196458"
   integrity sha512-mY6i+bwcgn0XAdZTiiBt6kyoUjLsm3Cuv0T4CchQJcq/UCSUcGPapSxc4g7whtIsUfcsJ2kGqZAdmqCF/VNC/Q==
+  dependencies:
+    acorn "^8.8.0"
+    pathe "^0.3.4"
+    pkg-types "^0.3.3"
+    ufo "^0.8.5"
+
+mlly@^0.5.12:
+  version "0.5.12"
+  resolved "https://registry.yarnpkg.com/mlly/-/mlly-0.5.12.tgz#e68de01b871edb488492da368693fd583e5b74ec"
+  integrity sha512-8moXGh6Hfy2Nmys3DDEm4CuxDBk5Y7Lk1jQ4JcwW0djO9b+SCKTpw0enIQeZIuEnPljdxHSGmcbXU9hpIIEYeQ==
   dependencies:
     acorn "^8.8.0"
     pathe "^0.3.4"
