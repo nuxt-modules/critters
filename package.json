@@ -8,7 +8,7 @@
     "module",
     "nuxt-module"
   ],
-  "repository": "nuxt-community/critters-module",
+  "repository": "nuxt-modules/critters",
   "license": "MIT",
   "type": "module",
   "exports": {
