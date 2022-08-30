@@ -10,7 +10,7 @@ await setup({
 })
 
 describe('module in generated pages', () => {
-  it('enables extractCSS', async () => {
+  it('processes generated index.html', async () => {
     const ctx = useTestContext()
     const body = await fsp.readFile(
       resolve(ctx.nuxt!.options.nitro.output?.dir || '', 'public/index.html'),
