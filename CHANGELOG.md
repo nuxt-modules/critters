@@ -1,3 +1,12 @@
+
+
+### [0.3.2](https://github.com/nuxt-modules/critters/compare/0.3.1...0.3.2) (2022-08-30)
+
+
+### Bug Fixes
+
+* compatibility with nitro binary rendering ([#136](https://github.com/nuxt-modules/critters/issues/136)) ([f63f38a](https://github.com/nuxt-modules/critters/commit/f63f38aa576badad3a8f692e38280de634931e08))
+
 ### [0.3.1](https://github.com/nuxt-modules/critters/compare/0.3.0...0.3.1) (2022-08-11)
 
 ## [0.3.0](https://github.com/nuxt-modules/critters/compare/0.2.0...0.3.0) (2022-08-11)
