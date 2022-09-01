@@ -1,5 +1,12 @@
 
 
+### [0.3.3](https://github.com/nuxt-modules/critters/compare/0.3.2...0.3.3) (2022-09-01)
+
+
+### Bug Fixes
+
+* revert nitropack workaround ([583a61a](https://github.com/nuxt-modules/critters/commit/583a61ad65dbeed1e3dcab7efe3b7f7702379ebc))
+
 ### [0.3.2](https://github.com/nuxt-modules/critters/compare/0.3.1...0.3.2) (2022-08-30)
 
 
