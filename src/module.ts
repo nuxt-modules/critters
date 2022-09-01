@@ -33,13 +33,8 @@ export default defineNuxtModule<ModuleOptions>({
         ...options.config,
       })
       nitro.hooks.hook('prerender:generate', async route => {
-        if (!route.fileName?.endsWith('.html')) return
-        if ('data' in route) {
-          const contents = new TextDecoder('utf-8').decode(new Uint8Array(route.data!))
-          route.data = new TextEncoder().encode(await critters.process(contents))
-        } else if (route.contents) {
-          route.contents = await critters.process(route.contents!)
-        }
+        if (!route.fileName?.endsWith('.html') || !route.contents) return
+        route.contents = await critters.process(route.contents)
       })
     })
 
