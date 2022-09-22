@@ -35,7 +35,7 @@
   "dependencies": {
     "@nuxt/kit": "3.0.0-rc.11",
     "critters": "0.0.16",
-    "pathe": "0.3.7"
+    "pathe": "0.3.8"
   },
   "devDependencies": {
     "@nuxt/module-builder": "latest",
