@@ -562,23 +562,23 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.0.tgz#c7bd7e9a516514e612d5d2e511ffc399e0eac322"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/kit@3.0.0-rc.10":
-  version "3.0.0-rc.10"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0-rc.10.tgz#d61f47584ca4491a881cd7e7500cb71e9e2a3524"
-  integrity sha512-sJEuvM6JTOWULRTLN0R4vZZYxus0ylevrCUELnez3GHedeDPopFrjFd8G+pZWTid9wix4SS3izWBvOJx9mLGlQ==
+"@nuxt/kit@3.0.0-rc.11":
+  version "3.0.0-rc.11"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0-rc.11.tgz#d147ef65509c073f1101fa1a19071e309bcf634f"
+  integrity sha512-o0E/k635Lzcxp4K5t0ToHC6WwQ1wyN0EIqMAQEzgiUexoAhzdURr21QI0D6e6U461u4KP7x92wYM87VxhMFXmQ==
   dependencies:
-    "@nuxt/schema" "3.0.0-rc.10"
-    c12 "^0.2.12"
+    "@nuxt/schema" "3.0.0-rc.11"
+    c12 "^0.2.13"
     consola "^2.15.3"
     defu "^6.1.0"
     globby "^13.1.2"
     hash-sum "^2.0.0"
     ignore "^5.2.0"
-    jiti "^1.15.0"
+    jiti "^1.16.0"
     knitwork "^0.1.2"
     lodash.template "^4.5.0"
-    mlly "^0.5.14"
-    pathe "^0.3.7"
+    mlly "^0.5.16"
+    pathe "^0.3.8"
     pkg-types "^0.3.5"
     scule "^0.3.2"
     semver "^7.3.7"
@@ -645,16 +645,16 @@
     pathe "^0.2.0"
     unbuild "^0.6.7"
 
-"@nuxt/schema@3.0.0-rc.10":
-  version "3.0.0-rc.10"
-  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.0.0-rc.10.tgz#70b9f49484950e0a88325246e4d2eab772675804"
-  integrity sha512-mHb+5qp3H07QvASA/fGEnUWx4S3plBt6nqZmPewxDuBys2au/PCBJBQiwKioBLgQvFPqysirScpLYPFKy3qdJw==
+"@nuxt/schema@3.0.0-rc.11":
+  version "3.0.0-rc.11"
+  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.0.0-rc.11.tgz#5600d9be3e54d933c0669755919bf2750c0fc6d0"
+  integrity sha512-EIBYQeBxJ+JZ8RjPRGaXM9+vtWMHQ4HsqZIw5a+p6hqRLGf53fHANT4vjMQZA4fAYBnJZJI7dB/OXkfyb/kikA==
   dependencies:
-    c12 "^0.2.12"
+    c12 "^0.2.13"
     create-require "^1.1.1"
     defu "^6.1.0"
-    jiti "^1.15.0"
-    pathe "^0.3.7"
+    jiti "^1.16.0"
+    pathe "^0.3.8"
     pkg-types "^0.3.5"
     postcss-import-resolver "^2.0.0"
     scule "^0.3.2"
@@ -1811,17 +1811,17 @@ bytes@3.1.2:
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.2.tgz#8b0beeb98605adf1b128fa4386403c009e0221a5"
   integrity sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==
 
-c12@^0.2.12:
-  version "0.2.12"
-  resolved "https://registry.yarnpkg.com/c12/-/c12-0.2.12.tgz#fa6cfebff3553e139f323dab8ac8ae8e5eebc237"
-  integrity sha512-Oq+XDrx2luek30VrWU0QXrvPbILAp8fDVgprRvhP4WL4CZaSqE7CNHIhq1R824YSkMVUOfMjsZFRcVqs7I2Xxg==
+c12@^0.2.13:
+  version "0.2.13"
+  resolved "https://registry.yarnpkg.com/c12/-/c12-0.2.13.tgz#c5eb795684cfecdbc5f0d31bb13df6f2f0913420"
+  integrity sha512-wJL0/knDbqM/3moLb+8Xd+w3JdkggkIIhiNBkxZ1mWlskKC/vajb85wM3UPg/D9nK6RbI1NgaVTg6AeXBVbknA==
   dependencies:
     defu "^6.1.0"
     dotenv "^16.0.2"
     gittar "^0.1.1"
     jiti "^1.15.0"
     mlly "^0.5.14"
-    pathe "^0.3.7"
+    pathe "^0.3.8"
     pkg-types "^0.3.5"
     rc9 "^1.2.2"
 
@@ -4799,6 +4799,11 @@ jiti@^1.15.0:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.15.0.tgz#cfa7ebfe4a60d77cf3bd4f8630cd99225b638417"
   integrity sha512-cClBkETOCVIpPMjX3ULlivuBvmt8l2Xtz+SHrULO06OqdtV0QFR2cuhc4FJnXByjUUX4CY0pl1nph0aFh9D3yA==
 
+jiti@^1.16.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.16.0.tgz#f72065954446ad1866fa8d6bcc3bed3cc1cebdaa"
+  integrity sha512-L3BJStEf5NAqNuzrpfbN71dp43mYIcBUlCRea/vdyv5dW/AYa1d4bpelko4SHdY3I6eN9Wzyasxirj1/vv5kmg==
+
 joycon@^3.0.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/joycon/-/joycon-3.1.1.tgz#bce8596d6ae808f8b68168f5fc69280996894f03"
@@ -5418,6 +5423,16 @@ mlly@^0.5.11, mlly@^0.5.12, mlly@^0.5.13, mlly@^0.5.14, mlly@^0.5.2, mlly@^0.5.4
     acorn "^8.8.0"
     pathe "^0.3.5"
     pkg-types "^0.3.4"
+    ufo "^0.8.5"
+
+mlly@^0.5.16:
+  version "0.5.16"
+  resolved "https://registry.yarnpkg.com/mlly/-/mlly-0.5.16.tgz#adb7d39fed81396a50b43173c88589de314015c7"
+  integrity sha512-LaJ8yuh4v0zEmge/g3c7jjFlhoCPfQn6RCjXgm9A0Qiuochq4BcuOxVfWmdnCoLTlg2MV+hqhOek+W2OhG0Lwg==
+  dependencies:
+    acorn "^8.8.0"
+    pathe "^0.3.8"
+    pkg-types "^0.3.5"
     ufo "^0.8.5"
 
 modify-values@^1.0.0:
@@ -6086,6 +6101,11 @@ pathe@^0.3.0, pathe@^0.3.2, pathe@^0.3.3, pathe@^0.3.4, pathe@^0.3.5:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/pathe/-/pathe-0.3.5.tgz#87e5c1164ded1bebeb9dea5dab63563144062303"
   integrity sha512-grU/QeYP0ChuE5kjU2/k8VtAeODzbernHlue0gTa27+ayGIu3wqYBIPGfP9r5xSqgCgDd4nWrjKXEfxMillByg==
+
+pathe@^0.3.8:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/pathe/-/pathe-0.3.8.tgz#3584f03fda1981a6efe8bc24623d82cbb4219acb"
+  integrity sha512-c71n61F1skhj/jzZe+fWE9XDoTYjWbUwIKVwFftZ5IOgiX44BVkTkD+/803YDgR50tqeO4eXWxLyVHBLWQAD1g==
 
 pathval@^1.1.1:
   version "1.1.1"
