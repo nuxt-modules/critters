@@ -5,7 +5,7 @@ import { resolve } from 'pathe'
 import { describe, it, expect } from 'vitest'
 
 await setup({
-  rootDir: fileURLToPath(new URL('../playground', import.meta.url).href),
+  rootDir: fileURLToPath(new URL('../playground', import.meta.url)),
   build: true,
 })
 

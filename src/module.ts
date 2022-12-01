@@ -22,6 +22,7 @@ export default defineNuxtModule<ModuleOptions>({
     if (nuxt.options.dev) return
 
     // Enable css extraction
+    // @ts-expect-error TODO: use @nuxt/bridge-schema
     nuxt.options.build.extractCSS = true
 
     // Nitro handler (for prerendering only)
@@ -42,15 +43,18 @@ export default defineNuxtModule<ModuleOptions>({
     if (isNuxt2()) {
       const critters = new Critters({
         path: resolve(nuxt.options.buildDir, 'dist/client'),
+        // @ts-expect-error TODO: use @nuxt/bridge-schema
         publicPath: nuxt.options.build.publicPath,
         ...options.config,
       })
 
       // Add transform step
+      // @ts-expect-error TODO: use @nuxt/bridge-schema
       nuxt.hook('render:route', async (_url, result) => {
         result.html = await critters.process(result.html)
       })
 
+      // @ts-expect-error TODO: use @nuxt/bridge-schema
       nuxt.hook('generate:page', async result => {
         result.html = await critters.process(result.html)
       })
