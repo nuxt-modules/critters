@@ -1,5 +1,7 @@
 
 
+## [0.4.0](https://github.com/nuxt-modules/critters/compare/0.3.3...0.4.0) (2022-12-01)
+
 ### [0.3.3](https://github.com/nuxt-modules/critters/compare/0.3.2...0.3.3) (2022-09-01)
 
 
