@@ -33,13 +33,13 @@
     "test": "yarn vitest run --no-threads"
   },
   "dependencies": {
-    "@nuxt/kit": "3.0.0",
+    "@nuxt/kit": "3.3.2",
     "critters": "0.0.16",
     "pathe": "1.1.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "0.2.1",
-    "@nuxt/test-utils": "3.0.0",
+    "@nuxt/test-utils": "3.3.2",
     "@nuxtjs/critters": "link:./",
     "@nuxtjs/eslint-config-typescript": "12.0.0",
     "@release-it/conventional-changelog": "5.1.1",
@@ -48,7 +48,7 @@
     "eslint-config-prettier": "8.8.0",
     "husky": "8.0.3",
     "lint-staged": "13.2.0",
-    "nuxt": "3.0.0",
+    "nuxt": "3.3.2",
     "release-it": "15.9.3",
     "vitest": "0.29.8"
   },
