@@ -33,7 +33,7 @@
     "test": "yarn vitest run --no-threads"
   },
   "dependencies": {
-    "@nuxt/kit": "3.4.2",
+    "@nuxt/kit": "^3.4.2",
     "critters": "0.0.16",
     "pathe": "1.1.0"
   },
