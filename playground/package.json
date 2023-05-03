@@ -1,3 +1,14 @@
 {
-  "name": "nuxt-critters-playground"
+  "private": true,
+  "name": "nuxt-critters-playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate"
+  },
+  "devDependencies": {
+    "@nuxtjs/critters": "latest",
+    "nuxt": "latest"
+  }
 }
