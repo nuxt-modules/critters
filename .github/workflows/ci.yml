@@ -35,7 +35,7 @@ jobs:
         run: pnpm lint:all
 
       - name: Test
-        run: pnpm test -- --coverage
+        run: pnpm vitest run --no-threads --coverage
 
       - name: Coverage
         uses: codecov/codecov-action@v3
