@@ -30,8 +30,8 @@ importers:
         specifier: 12.0.0
         version: 12.0.0(eslint@8.39.0)(typescript@5.0.4)
       '@vitest/coverage-c8':
-        specifier: 0.30.1
-        version: 0.30.1(vitest@0.31.0)
+        specifier: 0.31.0
+        version: 0.31.0(vitest@0.31.0)
       bumpp:
         specifier: 9.1.0
         version: 9.1.0
@@ -1358,12 +1358,14 @@ packages:
       vue: 3.2.47
     dev: true
 
-  /@vitest/coverage-c8@0.30.1(vitest@0.31.0):
-    resolution: {integrity: sha512-/Wa3dtSuckpdngAmiCwowaEXXgJkqPrtfvrs9HTB9QoEfNbZWPu4E4cjEn4lJZb4qcGf4fxFtUA2f9DnDNAzBA==}
+  /@vitest/coverage-c8@0.31.0(vitest@0.31.0):
+    resolution: {integrity: sha512-h72qN1D962AO7UefQVulm9JFP5ACS7OfhCdBHioXU8f7ohH/+NTZCgAqmgcfRNHHO/8wLFxx+93YVxhodkEJVA==}
     peerDependencies:
       vitest: '>=0.30.0 <1'
     dependencies:
+      '@ampproject/remapping': 2.2.1
       c8: 7.13.0
+      magic-string: 0.30.0
       picocolors: 1.0.0
       std-env: 3.3.2
       vitest: 0.31.0
