@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.4.2",
-    "critters": "0.0.16",
+    "critters": "0.0.17",
     "pathe": "1.1.0"
   },
   "devDependencies": {
