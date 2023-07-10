@@ -56,7 +56,8 @@
     "vitest": "0.31.4"
   },
   "resolutions": {
-    "@nuxtjs/critters": "link:./"
+    "@nuxtjs/critters": "link:./",
+    "@nuxt/kit": "^3.4.2"
   },
   "volta": {
     "node": "18.16.1"
