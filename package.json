@@ -56,7 +56,7 @@
   },
   "resolutions": {
     "@nuxtjs/critters": "link:./",
-    "@nuxt/kit": "3.5.3"
+    "@nuxt/kit": "3.6.2"
   },
   "packageManager": "pnpm@8.6.6"
 }
