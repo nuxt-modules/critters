@@ -59,8 +59,5 @@
     "@nuxtjs/critters": "link:./",
     "@nuxt/kit": "^3.4.2"
   },
-  "volta": {
-    "node": "18.16.1"
-  },
   "packageManager": "pnpm@8.6.6"
 }
