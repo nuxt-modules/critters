@@ -1,6 +1,7 @@
 import { defineNuxtModule, isNuxt2 } from '@nuxt/kit'
 import { resolve } from 'pathe'
-import Critters, { Options } from 'critters'
+import Critters from 'critters'
+import type { Options } from 'critters'
 
 export interface ModuleOptions {
   // Options passed directly to `critters`
