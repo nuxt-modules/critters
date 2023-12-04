@@ -34,7 +34,7 @@ export default defineNuxtModule<ModuleOptions>({
         ...options.config,
       })
       nitro.hooks.hook('prerender:generate', async route => {
-        if (!route.fileName?.endsWith('.html') || !route.contents) return
+        if (!route.fileName?.endsWith('.html') || route.error || !route.contents) return
         route.contents = await critters.process(route.contents)
       })
     })
@@ -51,11 +51,17 @@ export default defineNuxtModule<ModuleOptions>({
       // Add transform step
       // @ts-expect-error TODO: use @nuxt/bridge-schema
       nuxt.hook('render:route', async (_url, result) => {
-        result.html = await critters.process(result.html)
+        if (!result.html || result.error) return
+        try {
+          result.html = await critters.process(result.html)
+        } catch (e) {
+          console.log(e)
+        }
       })
 
       // @ts-expect-error TODO: use @nuxt/bridge-schema
       nuxt.hook('generate:page', async result => {
+        if (!result.html || result.error) return
         result.html = await critters.process(result.html)
       })
     }
