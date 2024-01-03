@@ -58,5 +58,5 @@
     "@nuxtjs/critters": "link:./",
     "@nuxt/schema": "3.8.2"
   },
-  "packageManager": "pnpm@8.12.1"
+  "packageManager": "pnpm@8.14.0"
 }
