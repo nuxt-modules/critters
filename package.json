@@ -33,7 +33,7 @@
     "prepare": "husky install",
     "prepublishOnly": "pnpm lint && pnpm test",
     "release": "bumpp && pnpm publish",
-    "test": "vitest run --no-threads"
+    "test": "vitest run"
   },
   "dependencies": {
     "@nuxt/kit": "3.8.2",
@@ -46,14 +46,14 @@
     "@nuxt/test-utils": "3.9.0",
     "@nuxtjs/critters": "link:./",
     "@nuxtjs/eslint-config-typescript": "12.1.0",
-    "@vitest/coverage-v8": "0.34.6",
+    "@vitest/coverage-v8": "1.2.0",
     "bumpp": "9.2.1",
     "eslint": "8.56.0",
     "eslint-config-prettier": "9.1.0",
     "husky": "8.0.3",
     "lint-staged": "15.2.0",
     "nuxt": "3.8.2",
-    "vitest": "0.34.6"
+    "vitest": "1.2.0"
   },
   "resolutions": {
     "@nuxtjs/critters": "link:./",
