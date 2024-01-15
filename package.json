@@ -33,7 +33,7 @@
     "prepare": "husky install",
     "prepublishOnly": "pnpm lint && pnpm test",
     "release": "bumpp && pnpm publish",
-    "test": "vitest run --no-threads"
+    "test": "vitest run"
   },
   "dependencies": {
     "@nuxt/kit": "3.8.2",
