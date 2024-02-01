@@ -38,4 +38,4 @@ jobs:
         run: pnpm vitest run --coverage
 
       - name: Coverage
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
