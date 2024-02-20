@@ -1,3 +1,27 @@
 {
-  "extends": "./.nuxt/tsconfig.json"
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "target": "es2018",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "outDir": "dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    // "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "declaration": true,
+    // "allowSyntheticDefaultImports": false,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "#imports": ["./playground/.nuxt/imports.d.ts"]
+    }
+  },
+  "extends": "./playground/.nuxt/tsconfig.json",
+  "include": ["src/**/*.ts", "src/*.jsons", "src/**/*.json"],
+  "exclude": ["node_modules", "cypress", "dist"]
 }
