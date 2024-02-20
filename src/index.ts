@@ -12,20 +12,21 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'critters',
-    configKey: 'critters',
+    name: 'nuxtStarter',
+    configKey: 'nuxtStarter',
   },
   defaults: {
     config: {
       preload: 'media',
     },
   },
-  setup (options, nuxt) {
+  setup(options, nuxt) {
     // Only enable for production
     if (nuxt.options.dev) return
 
     const logger = useLogger('critters')
 
+    // @nuxt/critter
     // Enable css extraction
     // @ts-expect-error TODO: use @nuxt/bridge-schema
     nuxt.options.build.extractCSS = true

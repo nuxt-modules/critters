@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/critters'],
+  modules: ['../src'],
   css: ['~/styles/global.css'],
   nitro: {
     prerender: {
