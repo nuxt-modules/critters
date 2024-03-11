@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "3.9.1",
-    "critters": "0.0.20",
+    "critters": "0.0.22",
     "pathe": "1.1.2",
     "ufo": "^1.3.2"
   },
