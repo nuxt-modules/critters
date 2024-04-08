@@ -37,5 +37,8 @@ jobs:
       - name: Test
         run: pnpm vitest run --coverage
 
+      - name: Build
+        run: pnpm prepack
+
       - name: Coverage
         uses: codecov/codecov-action@v4
