@@ -30,7 +30,6 @@
     "lint": "eslint --ext .js,.ts,.vue",
     "lint:all": "pnpm lint .",
     "prepack": "nuxt-module-build build",
-    "prepare": "husky install",
     "prepublishOnly": "pnpm lint && pnpm test",
     "release": "bumpp && pnpm publish",
     "test": "vitest run"
@@ -50,7 +49,6 @@
     "bumpp": "9.4.0",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
-    "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "nuxt": "3.11.2",
     "vitest": "1.4.0"
