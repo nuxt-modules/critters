@@ -20,7 +20,7 @@ export default defineNuxtModule<ModuleOptions>({
       preload: 'media',
     },
   },
-  setup (options, nuxt) {
+  setup(options, nuxt) {
     // Only enable for production
     if (nuxt.options.dev) return
 
@@ -33,13 +33,13 @@ export default defineNuxtModule<ModuleOptions>({
     // Nitro handler (for prerendering only)
 
     const generatedFiles = new Set<string>()
-    nuxt.hook('nitro:init', nitro => {
-      nitro.hooks.hook('prerender:generate', route => {
+    nuxt.hook('nitro:init', (nitro) => {
+      nitro.hooks.hook('prerender:generate', (route) => {
         if (!route.fileName?.endsWith('.html') || route.error) return
         generatedFiles.add(withoutLeadingSlash(route.fileName))
       })
     })
-    nuxt.hook('nitro:build:public-assets', async nitro => {
+    nuxt.hook('nitro:build:public-assets', async (nitro) => {
       const critters = new Critters({
         path: nitro.options.output.publicDir,
         publicPath: nitro.options.baseURL,
@@ -51,7 +51,8 @@ export default defineNuxtModule<ModuleOptions>({
           const contents = await readFile(path, 'utf-8')
           const processed = await critters.process(contents)
           await writeFile(path, processed)
-        } catch {
+        }
+        catch {
           logger.log(`Could not inline CSS in \`${file}\`.`)
         }
       }
@@ -72,13 +73,14 @@ export default defineNuxtModule<ModuleOptions>({
         if (!result.html || result.error) return
         try {
           result.html = await critters.process(result.html)
-        } catch (e) {
+        }
+        catch (e) {
           logger.log(e)
         }
       })
 
       // @ts-expect-error TODO: use @nuxt/bridge-schema
-      nuxt.hook('generate:page', async result => {
+      nuxt.hook('generate:page', async (result) => {
         if (!result.html || result.error) return
         result.html = await critters.process(result.html)
       })
