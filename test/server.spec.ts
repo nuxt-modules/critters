@@ -1,4 +1,4 @@
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 import { setup, $fetch, useTestContext } from '@nuxt/test-utils'
 import { describe, it, expect } from 'vitest'
 
