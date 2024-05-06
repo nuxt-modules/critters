@@ -32,8 +32,8 @@ importers:
         specifier: 0.6.0
         version: 0.6.0(@nuxt/kit@3.11.2(rollup@4.14.1))(nuxi@3.11.1)(typescript@5.4.4)
       '@nuxt/test-utils':
-        specifier: 3.12.0
-        version: 3.12.0(h3@1.11.1)(rollup@4.14.1)(vite@5.2.8(@types/node@20.10.7)(terser@5.26.0))(vitest@1.4.0(@types/node@20.10.7)(terser@5.26.0))(vue-router@4.3.0(vue@3.4.21(typescript@5.4.4)))(vue@3.4.21(typescript@5.4.4))
+        specifier: 3.12.1
+        version: 3.12.1(h3@1.11.1)(rollup@4.14.1)(vite@5.2.8(@types/node@20.10.7)(terser@5.26.0))(vitest@1.4.0(@types/node@20.10.7)(terser@5.26.0))(vue-router@4.3.0(vue@3.4.21(typescript@5.4.4)))(vue@3.4.21(typescript@5.4.4))
       '@nuxtjs/critters':
         specifier: 'link:'
         version: 'link:'
@@ -751,8 +751,8 @@ packages:
     resolution: {integrity: sha512-Ghv2MgWbJcUM9G5Dy3oQP0cJkUwEgaiuQxEF61FXJdn0a69Q4StZEP/hLF0MWPM9m6EvAwI7orxkJHM7MrmtVg==}
     hasBin: true
 
-  '@nuxt/test-utils@3.12.0':
-    resolution: {integrity: sha512-Q3HP53TDIYeqHT65r31HZhK/gRwVBmchSdVj1tfiYECyqstckvsQ4Cyt/GX/XmD7cLdD3d5aHow8LaMfP+BSqQ==}
+  '@nuxt/test-utils@3.12.1':
+    resolution: {integrity: sha512-VRLNcDz9Ad/4pjHdNRVLPs5DVIO5IJ0ij81PLmsE/lt+5oeeIQld+AgHgcqM4BM1YKsXTBuavbk1mEBqj7h/+A==}
     engines: {node: ^14.18.0 || >=16.10.0}
     peerDependencies:
       '@cucumber/cucumber': ^10.3.1
@@ -762,7 +762,7 @@ packages:
       '@vitest/ui': ^0.34.6 || ^1.0.0
       '@vue/test-utils': ^2.4.2
       h3: '*'
-      happy-dom: ^9.10.9 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0
+      happy-dom: ^9.10.9 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0
       jsdom: ^22.0.0 || ^23.0.0 || ^24.0.0
       playwright-core: ^1.34.3
       vite: '*'
@@ -5453,7 +5453,7 @@ snapshots:
       global-directory: 4.0.1
       magicast: 0.3.3
       pathe: 1.1.2
-      pkg-types: 1.0.3
+      pkg-types: 1.1.0
       prompts: 2.4.2
       rc9: 2.1.1
       semver: 7.6.0
@@ -5636,7 +5636,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@nuxt/test-utils@3.12.0(h3@1.11.1)(rollup@4.14.1)(vite@5.2.8(@types/node@20.10.7)(terser@5.26.0))(vitest@1.4.0(@types/node@20.10.7)(terser@5.26.0))(vue-router@4.3.0(vue@3.4.21(typescript@5.4.4)))(vue@3.4.21(typescript@5.4.4))':
+  '@nuxt/test-utils@3.12.1(h3@1.11.1)(rollup@4.14.1)(vite@5.2.8(@types/node@20.10.7)(terser@5.26.0))(vitest@1.4.0(@types/node@20.10.7)(terser@5.26.0))(vue-router@4.3.0(vue@3.4.21(typescript@5.4.4)))(vue@3.4.21(typescript@5.4.4))':
     dependencies:
       '@nuxt/kit': 3.11.2(rollup@4.14.1)
       '@nuxt/schema': 3.11.2(rollup@4.14.1)
@@ -8276,7 +8276,7 @@ snapshots:
   local-pkg@0.5.0:
     dependencies:
       mlly: 1.6.1
-      pkg-types: 1.0.3
+      pkg-types: 1.1.0
 
   locate-path@5.0.0:
     dependencies:
@@ -10088,7 +10088,7 @@ snapshots:
       magic-string: 0.30.9
       mlly: 1.6.1
       pathe: 1.1.2
-      pkg-types: 1.0.3
+      pkg-types: 1.1.0
       unplugin: 1.10.1
 
   update-browserslist-db@1.0.13(browserslist@4.23.0):
@@ -10211,7 +10211,7 @@ snapshots:
 
   vitest-environment-nuxt@1.0.0(h3@1.11.1)(rollup@4.14.1)(vite@5.2.8(@types/node@20.10.7)(terser@5.26.0))(vitest@1.4.0(@types/node@20.10.7)(terser@5.26.0))(vue-router@4.3.0(vue@3.4.21(typescript@5.4.4)))(vue@3.4.21(typescript@5.4.4)):
     dependencies:
-      '@nuxt/test-utils': 3.12.0(h3@1.11.1)(rollup@4.14.1)(vite@5.2.8(@types/node@20.10.7)(terser@5.26.0))(vitest@1.4.0(@types/node@20.10.7)(terser@5.26.0))(vue-router@4.3.0(vue@3.4.21(typescript@5.4.4)))(vue@3.4.21(typescript@5.4.4))
+      '@nuxt/test-utils': 3.12.1(h3@1.11.1)(rollup@4.14.1)(vite@5.2.8(@types/node@20.10.7)(terser@5.26.0))(vitest@1.4.0(@types/node@20.10.7)(terser@5.26.0))(vue-router@4.3.0(vue@3.4.21(typescript@5.4.4)))(vue@3.4.21(typescript@5.4.4))
     transitivePeerDependencies:
       - '@cucumber/cucumber'
       - '@jest/globals'
