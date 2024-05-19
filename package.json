@@ -48,7 +48,7 @@
     "@nuxt/test-utils": "3.12.1",
     "@nuxtjs/critters": "link:./",
     "@vitest/coverage-v8": "1.4.0",
-    "bumpp": "9.4.0",
+    "bumpp": "9.4.1",
     "eslint": "9.0.0",
     "lint-staged": "15.2.2",
     "nuxt": "3.11.2",
