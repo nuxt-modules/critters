@@ -50,7 +50,7 @@
     "@vitest/coverage-v8": "2.0.5",
     "bumpp": "9.4.1",
     "eslint": "9.7.0",
-    "lint-staged": "15.2.7",
+    "lint-staged": "15.2.8",
     "nuxt": "3.11.2",
     "vitest": "2.0.5",
     "@nuxt/eslint-config": "0.3.13"
