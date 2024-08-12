@@ -3,7 +3,10 @@ import { defineNuxtModule, isNuxt2, useLogger } from '@nuxt/kit'
 import { resolve } from 'pathe'
 import { withoutLeadingSlash } from 'ufo'
 import Critters from 'critters'
-import type { Options } from 'critters'
+
+// Until https://github.com/GoogleChromeLabs/critters/pull/151 merges, we
+// need to inline types for critters options
+import type { Options } from './lib/critters-types'
 
 export interface ModuleOptions {
   // Options passed directly to `critters`
