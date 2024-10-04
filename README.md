@@ -75,7 +75,7 @@ export default defineNuxtConfig({
 [npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/critters/latest.svg
 [npm-version-href]: https://npmjs.com/package/@nuxtjs/critters
 [npm-downloads-src]: https://img.shields.io/npm/dm/@nuxtjs/critters.svg
-[npm-downloads-href]: https://npmjs.com/package/@nuxtjs/critters
+[npm-downloads-href]: https://npm.chart.dev/@nuxtjs/critters
 [github-actions-ci-src]: https://github.com/nuxt-modules/critters/workflows/ci/badge.svg
 [github-actions-ci-href]: https://github.com/nuxt-modules/critters/actions?query=workflow%3Aci
 [codecov-src]: https://img.shields.io/codecov/c/github/nuxt-modules/critters.svg
