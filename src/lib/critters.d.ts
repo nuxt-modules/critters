@@ -1,4 +1,4 @@
-declare module 'critters' {
+declare module 'beasties' {
   import type { Options } from './critters-types'
 
   export default class Critters {

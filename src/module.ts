@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises'
 import { defineNuxtModule, isNuxt2, useLogger } from '@nuxt/kit'
 import { resolve } from 'pathe'
 import { withoutLeadingSlash } from 'ufo'
-import Critters from 'critters'
+import Critters from 'beasties'
 
 // Until https://github.com/GoogleChromeLabs/critters/pull/151 merges, we
 // need to inline types for critters options
