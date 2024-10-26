@@ -37,7 +37,7 @@ yarn add @nuxtjs/critters # or npm install @nuxtjs/critters
 
 Nuxt has a number of ways to optimize your CSS in production:
 
-1. ✅ Nuxt uses [`cssnano`](https://cssnano.co/) in the build step to minify CSS rules
+1. ✅ Nuxt uses [`cssnano`](https://cssnano.github.io/cssnano/) in the build step to minify CSS rules
 2. 📦 You can enable [`purgecss`](https://github.com/Developmint/nuxt-purgecss) to remove unused CSS rules from your bundle.
 3. ✅ with `@nuxtjs/critters` you can now extract CSS files and load them separately, just inlining the CSS necessary to render the page.
 
