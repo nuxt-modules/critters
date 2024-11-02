@@ -38,25 +38,25 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@nuxt/kit": "3.12.4",
+    "@nuxt/kit": "3.13.2",
     "beasties": "0.1.0",
     "pathe": "1.1.2",
     "ufo": "^1.5.4"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "0.6.1",
-    "@nuxt/module-builder": "0.8.3",
-    "@nuxt/test-utils": "3.14.1",
+    "@nuxt/module-builder": "0.8.4",
+    "@nuxt/test-utils": "3.14.4",
     "@nuxtjs/critters": "link:./",
     "@vitest/coverage-v8": "2.1.4",
     "bumpp": "9.8.0",
     "eslint": "9.14.0",
     "lint-staged": "15.2.10",
-    "nuxt": "3.12.4",
+    "nuxt": "3.13.2",
     "vitest": "2.1.4"
   },
   "resolutions": {
-    "@nuxt/schema": "3.12.4",
+    "@nuxt/schema": "3.13.2",
     "@nuxtjs/critters": "link:./"
   },
   "packageManager": "pnpm@9.12.3"
