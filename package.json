@@ -38,7 +38,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@nuxt/kit": "3.14.159",
+    "@nuxt/kit": "3.14.1592",
     "beasties": "0.1.0",
     "pathe": "1.1.2",
     "ufo": "^1.5.4"
@@ -52,11 +52,11 @@
     "bumpp": "9.8.1",
     "eslint": "9.15.0",
     "lint-staged": "15.2.10",
-    "nuxt": "3.14.159",
+    "nuxt": "3.14.1592",
     "vitest": "2.1.5"
   },
   "resolutions": {
-    "@nuxt/schema": "3.14.159",
+    "@nuxt/schema": "3.14.1592",
     "@nuxtjs/critters": "link:./"
   },
   "packageManager": "pnpm@9.14.1"
