@@ -6,7 +6,7 @@ import Beasties from 'beasties'
 import type { Options } from 'beasties'
 
 export interface ModuleOptions {
-  // Options passed directly to `critters`
+  // Options passed directly to `beasties`
   config?: Options
 }
 
@@ -40,7 +40,7 @@ export default defineNuxtModule<ModuleOptions>({
       })
     })
     nuxt.hook('nitro:build:public-assets', async (nitro) => {
-      const critters = new Beasties({
+      const beasties = new Beasties({
         path: nitro.options.output.publicDir,
         publicPath: nitro.options.baseURL,
         ...options.config,
@@ -49,7 +49,7 @@ export default defineNuxtModule<ModuleOptions>({
         try {
           const path = resolve(nitro.options.output.publicDir, file)
           const contents = await readFile(path, 'utf-8')
-          const processed = await critters.process(contents)
+          const processed = await beasties.process(contents)
           await writeFile(path, processed)
         }
         catch {
@@ -60,7 +60,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     /* c8 ignore start */
     if (isNuxt2()) {
-      const critters = new Beasties({
+      const beasties = new Beasties({
         path: resolve(nuxt.options.buildDir, 'dist/client'),
         // @ts-expect-error TODO: use @nuxt/bridge-schema
         publicPath: nuxt.options.build.publicPath,
@@ -72,7 +72,7 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.hook('render:route', async (_url, result) => {
         if (!result.html || result.error) return
         try {
-          result.html = await critters.process(result.html)
+          result.html = await beasties.process(result.html)
         }
         catch (e) {
           logger.log(e)
@@ -82,7 +82,7 @@ export default defineNuxtModule<ModuleOptions>({
       // @ts-expect-error TODO: use @nuxt/bridge-schema
       nuxt.hook('generate:page', async (result) => {
         if (!result.html || result.error) return
-        result.html = await critters.process(result.html)
+        result.html = await beasties.process(result.html)
       })
     }
   },

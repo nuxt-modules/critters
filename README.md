@@ -6,7 +6,7 @@
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
-> CSS optimization using [critters](https://github.com/GoogleChromeLabs/critters) for [Nuxt](https://nuxtjs.org)
+> CSS optimization using [beasties](https://github.com/danielroe/beasties) (formerly [critters](https://github.com/GoogleChromeLabs/critters)) for [Nuxt](https://nuxtjs.org)
 
 ## Features
 
@@ -51,7 +51,7 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   modules: ['@nuxtjs/critters'],
   critters: {
-    // Options passed directly to critters: https://github.com/GoogleChromeLabs/critters#critters-2
+    // Options passed directly to beasties: https://github.com/danielroe/beasties#beasties-
     config: {
       // Default: 'media'
       preload: 'swap',
@@ -63,8 +63,9 @@ export default defineNuxtConfig({
 ## Development
 
 1. Clone this repository
-2. Install dependencies using `yarn install`
-3. Start development server using `yarn dev`
+1. Enable corepack with `corepack enable`
+1. Install dependencies using `pnpm install`
+1. Start development server using `pnpm dev`
 
 ## License
 
