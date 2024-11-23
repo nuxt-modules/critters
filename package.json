@@ -52,6 +52,7 @@
     "eslint": "9.15.0",
     "lint-staged": "15.2.10",
     "nuxt": "3.14.1592",
+    "simple-git-hooks": "2.11.1",
     "vitest": "2.1.5"
   },
   "resolutions": {
@@ -62,7 +63,9 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*": ["npx eslint --fix"]
+    "*": [
+      "npx eslint --fix"
+    ]
   },
   "packageManager": "pnpm@9.14.2"
 }
