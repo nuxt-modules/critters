@@ -37,9 +37,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@nuxt/kit": "3.14.1592",
-    "beasties": "0.1.0",
-    "pathe": "1.1.2",
+    "@nuxt/kit": "^3.14.1592",
+    "beasties": "^0.1.0",
+    "pathe": "^1.1.2",
     "ufo": "^1.5.4"
   },
   "devDependencies": {

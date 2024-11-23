@@ -13,13 +13,13 @@ importers:
   .:
     dependencies:
       '@nuxt/kit':
-        specifier: 3.14.1592
+        specifier: ^3.14.1592
         version: 3.14.1592(magicast@0.3.5)(rollup@3.29.5)
       beasties:
-        specifier: 0.1.0
+        specifier: ^0.1.0
         version: 0.1.0
       pathe:
-        specifier: 1.1.2
+        specifier: ^1.1.2
         version: 1.1.2
       ufo:
         specifier: ^1.5.4
