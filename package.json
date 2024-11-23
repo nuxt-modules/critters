@@ -29,7 +29,7 @@
   "scripts": {
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground && simple-git-hooks",
     "lint": "eslint .",
     "prepack": "nuxt-module-build build",
     "prepublishOnly": "pnpm lint && pnpm test",
@@ -57,6 +57,12 @@
   "resolutions": {
     "@nuxt/schema": "3.14.1592",
     "@nuxtjs/critters": "link:./"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": ["npx eslint --fix"]
   },
   "packageManager": "pnpm@9.14.2"
 }
