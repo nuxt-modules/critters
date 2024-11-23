@@ -34,7 +34,7 @@ jobs:
         run: pnpm dev:prepare
 
       - name: Lint
-        run: pnpm lint:all
+        run: pnpm lint
 
       - name: Test
         run: pnpm vitest run --coverage
