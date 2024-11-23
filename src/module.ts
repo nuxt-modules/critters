@@ -2,11 +2,8 @@ import { readFile, writeFile } from 'node:fs/promises'
 import { defineNuxtModule, isNuxt2, useLogger } from '@nuxt/kit'
 import { resolve } from 'pathe'
 import { withoutLeadingSlash } from 'ufo'
-import Critters from 'beasties'
-
-// Until https://github.com/GoogleChromeLabs/critters/pull/151 merges, we
-// need to inline types for critters options
-import type { Options } from './lib/critters-types'
+import Beasties from 'beasties'
+import type { Options } from 'beasties'
 
 export interface ModuleOptions {
   // Options passed directly to `critters`
@@ -43,7 +40,7 @@ export default defineNuxtModule<ModuleOptions>({
       })
     })
     nuxt.hook('nitro:build:public-assets', async (nitro) => {
-      const critters = new Critters({
+      const critters = new Beasties({
         path: nitro.options.output.publicDir,
         publicPath: nitro.options.baseURL,
         ...options.config,
@@ -63,7 +60,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     /* c8 ignore start */
     if (isNuxt2()) {
-      const critters = new Critters({
+      const critters = new Beasties({
         path: resolve(nuxt.options.buildDir, 'dist/client'),
         // @ts-expect-error TODO: use @nuxt/bridge-schema
         publicPath: nuxt.options.build.publicPath,
