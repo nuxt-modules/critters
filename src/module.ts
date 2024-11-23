@@ -1,5 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises'
-import { defineNuxtModule, isNuxt2, useLogger } from '@nuxt/kit'
+import { defineNuxtModule, isNuxtMajorVersion, useLogger } from '@nuxt/kit'
 import { resolve } from 'pathe'
 import { withoutLeadingSlash } from 'ufo'
 import Beasties from 'beasties'
@@ -59,7 +59,7 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     /* c8 ignore start */
-    if (isNuxt2()) {
+    if (isNuxtMajorVersion(3)) {
       const beasties = new Beasties({
         path: resolve(nuxt.options.buildDir, 'dist/client'),
         // @ts-expect-error TODO: use @nuxt/bridge-schema
