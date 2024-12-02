@@ -47,13 +47,13 @@
     "@nuxt/module-builder": "0.8.4",
     "@nuxt/test-utils": "3.14.4",
     "@nuxtjs/critters": "link:./",
-    "@vitest/coverage-v8": "2.1.6",
+    "@vitest/coverage-v8": "2.1.7",
     "bumpp": "9.8.1",
     "eslint": "9.16.0",
     "lint-staged": "15.2.10",
     "nuxt": "3.14.1592",
     "simple-git-hooks": "2.11.1",
-    "vitest": "2.1.6"
+    "vitest": "2.1.7"
   },
   "resolutions": {
     "@nuxt/schema": "3.14.1592",
