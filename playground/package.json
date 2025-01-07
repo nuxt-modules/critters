@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "@nuxtjs/critters": "latest",
-    "nuxt": "3.15.0"
+    "nuxt": "3.15.1"
   }
 }
