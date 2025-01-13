@@ -39,7 +39,7 @@
   "dependencies": {
     "@nuxt/kit": "^3.14.1592",
     "beasties": "^0.2.0",
-    "pathe": "^1.1.2",
+    "pathe": "^2.0.0",
     "ufo": "^1.5.4"
   },
   "devDependencies": {
