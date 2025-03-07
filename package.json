@@ -56,12 +56,12 @@
     "bumpp": "10.0.3",
     "eslint": "9.21.0",
     "lint-staged": "15.4.3",
-    "nuxt": "3.15.4",
+    "nuxt": "3.16.0",
     "simple-git-hooks": "2.11.1",
     "vitest": "3.0.7"
   },
   "resolutions": {
-    "@nuxt/schema": "3.15.4",
+    "@nuxt/schema": "3.16.0",
     "@nuxtjs/critters": "link:./"
   },
   "simple-git-hooks": {
