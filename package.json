@@ -57,7 +57,7 @@
     "eslint": "9.22.0",
     "lint-staged": "15.5.0",
     "nuxt": "3.16.1",
-    "simple-git-hooks": "2.11.1",
+    "simple-git-hooks": "2.12.1",
     "vitest": "3.0.9"
   },
   "resolutions": {
@@ -72,5 +72,5 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@10.6.4"
+  "packageManager": "pnpm@10.6.5"
 }
