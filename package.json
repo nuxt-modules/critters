@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.14.1592",
-    "beasties": "^0.2.0",
+    "beasties": "^0.3.0",
     "pathe": "^2.0.0",
     "ufo": "^1.5.4"
   },
@@ -72,5 +72,5 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@10.7.0"
+  "packageManager": "pnpm@10.7.1"
 }
