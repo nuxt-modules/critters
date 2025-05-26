@@ -17,7 +17,7 @@ importers:
         version: 3.17.4(magicast@0.3.5)
       beasties:
         specifier: ^0.3.0
-        version: 0.3.3
+        version: 0.3.4
       pathe:
         specifier: ^2.0.0
         version: 2.0.3
@@ -1529,8 +1529,8 @@ packages:
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
-  beasties@0.3.3:
-    resolution: {integrity: sha512-Mba3V4hTPrM7P2CSidueg71JZ0G+DyK7maBqp4/uax/PQznwdFti9cOW6Z3lTxBRH84kRICN0TyQ0MSSmufaAw==}
+  beasties@0.3.4:
+    resolution: {integrity: sha512-NmzN1zN1cvGccXFyZ73335+ASXwBlVWcUPssiUDIlFdfyatHPRRufjCd5w8oPaQPvVnf9ELklaCGb1gi9FBwIw==}
     engines: {node: '>=14.0.0'}
 
   bindings@1.5.0:
@@ -6479,7 +6479,7 @@ snapshots:
 
   base64-js@1.5.1: {}
 
-  beasties@0.3.3:
+  beasties@0.3.4:
     dependencies:
       css-select: 5.1.0
       css-what: 6.1.0
