@@ -32,9 +32,9 @@
     "dist"
   ],
   "scripts": {
-    "dev": "nuxi dev playground",
-    "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground && simple-git-hooks",
+    "dev": "nuxt dev playground",
+    "dev:build": "nuxt build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxt prepare playground && simple-git-hooks",
     "lint": "eslint .",
     "prepack": "nuxt-module-build build",
     "prepublishOnly": "pnpm lint && pnpm test",
