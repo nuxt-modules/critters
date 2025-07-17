@@ -59,7 +59,7 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     /* c8 ignore start */
-    if (isNuxtMajorVersion(3)) {
+    if (!isNuxtMajorVersion(2)) {
       const beasties = new Beasties({
         path: resolve(nuxt.options.buildDir, 'dist/client'),
         // @ts-expect-error TODO: use @nuxt/bridge-schema
