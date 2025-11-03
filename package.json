@@ -54,7 +54,7 @@
     "@nuxtjs/critters": "link:./",
     "@vitest/coverage-v8": "4.0.6",
     "bumpp": "10.3.1",
-    "eslint": "9.39.0",
+    "eslint": "9.39.1",
     "lint-staged": "16.2.6",
     "nuxt": "4.2.0",
     "simple-git-hooks": "2.13.1",
