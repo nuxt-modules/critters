@@ -55,7 +55,7 @@
     "@vitest/coverage-v8": "4.0.10",
     "bumpp": "10.3.1",
     "eslint": "9.39.1",
-    "lint-staged": "16.2.6",
+    "lint-staged": "16.2.7",
     "nuxt": "4.2.1",
     "simple-git-hooks": "2.13.1",
     "vitest": "4.0.10"
@@ -72,5 +72,5 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@10.22.0"
+  "packageManager": "pnpm@10.23.0"
 }
