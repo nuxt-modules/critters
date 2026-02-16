@@ -48,7 +48,7 @@
     "ufo": "^1.5.4"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "1.14.0",
+    "@nuxt/eslint-config": "1.15.1",
     "@nuxt/module-builder": "1.0.2",
     "@nuxt/test-utils": "4.0.0",
     "@nuxtjs/critters": "link:./",
@@ -72,5 +72,5 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@10.29.2"
+  "packageManager": "pnpm@10.29.3"
 }
