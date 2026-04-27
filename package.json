@@ -50,7 +50,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "1.15.2",
     "@nuxt/module-builder": "1.0.2",
-    "@nuxt/test-utils": "4.0.0",
+    "@nuxt/test-utils": "4.0.3",
     "@nuxtjs/critters": "link:./",
     "@vitest/coverage-v8": "4.1.5",
     "bumpp": "11.0.1",
