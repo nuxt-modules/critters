@@ -1,15 +1,12 @@
 packages:
   - playground
 
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-  - esbuild
-  - unrs-resolver
-
-onlyBuiltDependencies:
-  - simple-git-hooks
-
-
 overrides:
   "@nuxt/schema": "4.4.5"
   "@nuxtjs/critters": "link:./"
+
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: false
+  simple-git-hooks: true
+  unrs-resolver: false
