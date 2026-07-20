@@ -2,7 +2,7 @@ packages:
   - playground
 
 overrides:
-  "@nuxt/schema": "4.4.8"
+  "@nuxt/schema": "4.5.0"
   "@nuxtjs/critters": "link:./"
 
 allowBuilds:
