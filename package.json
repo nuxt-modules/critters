@@ -54,7 +54,7 @@
     "@nuxt/test-utils": "4.1.0",
     "@nuxtjs/critters": "link:./",
     "@vitest/coverage-v8": "4.1.10",
-    "bumpp": "12.2.0",
+    "bumpp": "12.2.1",
     "eslint": "10.8.1",
     "lint-staged": "17.3.0",
     "nuxt": "4.5.2",
@@ -69,5 +69,5 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@11.21.0"
+  "packageManager": "pnpm@11.22.0"
 }
