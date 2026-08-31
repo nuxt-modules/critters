@@ -54,11 +54,11 @@
     "@nuxt/test-utils": "4.2.0",
     "@nuxtjs/critters": "link:./",
     "@vitest/coverage-v8": "4.1.11",
-    "bumpp": "12.2.1",
+    "bumpp": "12.2.2",
     "eslint": "10.9.0",
-    "lint-staged": "17.3.0",
+    "lint-staged": "17.4.1",
     "nuxt": "4.5.2",
-    "simple-git-hooks": "2.13.1",
+    "simple-git-hooks": "2.14.0",
     "vitest": "4.1.11"
   },
   "simple-git-hooks": {
@@ -69,5 +69,5 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@11.22.0"
+  "packageManager": "pnpm@11.24.0"
 }
