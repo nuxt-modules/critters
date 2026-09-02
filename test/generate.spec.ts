@@ -43,4 +43,21 @@ describe('module in generated pages', () => {
     expect(body).toContain('media="print"')
     expect(body).toContain('<noscript>')
   })
+
+  it('bundles the beasties runtime into the server output', async () => {
+    const ctx = useTestContext()
+    const serverDir = resolve(ctx.nuxt!.options.nitro.output?.dir || '', 'server')
+
+    const chunks = await fsp.glob('**/*.mjs', { cwd: serverDir })
+    for await (const chunk of chunks) {
+      const contents = await fsp.readFile(resolve(serverDir, chunk), 'utf-8')
+      expect(contents, chunk).not.toMatch(/from ['"]beasties/)
+      expect(contents, chunk).not.toMatch(/require\(['"]beasties/)
+    }
+
+    expect(await fsp.stat(resolve(serverDir, 'node_modules/beasties')).catch(() => null)).toBeNull()
+
+    const pkg = JSON.parse(await fsp.readFile(resolve(serverDir, 'package.json'), 'utf-8'))
+    expect(pkg.dependencies).not.toHaveProperty('beasties')
+  })
 })

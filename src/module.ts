@@ -1,3 +1,5 @@
+import { createRequire } from 'node:module'
+import { dirname } from 'node:path'
 import { addServerPlugin, createResolver, defineNuxtModule, useLogger } from '@nuxt/kit'
 import { compileSheet, encodePlan } from 'beasties/compiler'
 import type { CompileOptions } from 'beasties/compiler'
@@ -94,9 +96,14 @@ export default defineNuxtModule<ModuleOptions>({
       ].join('\n')
     }
 
+    const beastiesRuntime = createRequire(import.meta.url).resolve('beasties/runtime')
+
+    nuxt.options.nitro.alias ||= {}
+    nuxt.options.nitro.alias['beasties/runtime'] = beastiesRuntime
+
     nuxt.options.nitro.externals ||= {}
     nuxt.options.nitro.externals.inline ||= []
-    nuxt.options.nitro.externals.inline.push('beasties/runtime')
+    nuxt.options.nitro.externals.inline.push(dirname(beastiesRuntime))
 
     addServerPlugin(resolver.resolve('./runtime/nitro-plugin'))
   },
