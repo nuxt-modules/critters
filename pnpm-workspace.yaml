@@ -10,3 +10,6 @@ allowBuilds:
   esbuild: false
   simple-git-hooks: true
   unrs-resolver: false
+
+minimumReleaseAgeExclude:
+  - beasties@0.5.0 || 0.5.2

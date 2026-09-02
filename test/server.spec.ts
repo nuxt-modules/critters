@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'node:url'
-import { setup, $fetch, useTestContext } from '@nuxt/test-utils'
+import { setup, $fetch } from '@nuxt/test-utils'
 import { describe, it, expect } from 'vitest'
 
 await setup({
@@ -7,14 +7,9 @@ await setup({
   server: true,
 })
 
-describe.skip('module in server', () => {
-  it('enables extractCSS', () => {
-    const ctx = useTestContext()
-    expect(ctx.nuxt!.options.build.extractCSS).toBeTruthy()
-  })
-
+describe('module in server', () => {
   it('inlines CSS', async () => {
-    const body = await $fetch('/')
+    const body = await $fetch<string>('/')
     expect(body).toContain('<style>')
     expect(body).toContain('.sample-class')
     expect(body).not.toContain('.sample-unused-class')

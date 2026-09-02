@@ -44,8 +44,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.0.0",
-    "beasties": "^0.4.0",
-    "pathe": "^2.0.0",
+    "beasties": "^0.5.2",
     "ufo": "^1.5.4"
   },
   "devDependencies": {
@@ -58,6 +57,7 @@
     "eslint": "10.9.1",
     "lint-staged": "17.4.1",
     "nuxt": "4.5.2",
+    "pathe": "^2.0.0",
     "simple-git-hooks": "2.14.0",
     "vitest": "4.1.11"
   },
