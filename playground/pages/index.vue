@@ -1,6 +1,8 @@
 <template>
   <div :class="toggle ? 'sample-class' : 'sample-unused-class'">
-    some text
+    <p class="sample-media-class sample-animated">
+      some text
+    </p>
     <button @click="toggle = !toggle">
       Toggle class
     </button>

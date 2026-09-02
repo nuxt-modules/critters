@@ -11,9 +11,9 @@
 ## Features
 
 - Zero-configuration required
-- Enables CSS Extraction
+- Stylesheets are compiled at build time, so no CSS parser or DOM is needed at runtime
 - Critical CSS automatically injected to page
-- Works with Nitro prerendering
+- Works with runtime SSR and Nitro prerendering
 
 ## Quick setup
 
@@ -41,6 +41,10 @@ Nuxt has a number of ways to optimize your CSS in production:
 2. 📦 You can enable [`purgecss`](https://github.com/Developmint/nuxt-purgecss) to remove unused CSS rules from your bundle.
 3. ✅ with `@nuxtjs/critters` you can now extract CSS files and load them separately, just inlining the CSS necessary to render the page.
 
+At build time the module compiles every CSS asset emitted by the client build into a compact plan with [`beasties/compiler`](https://github.com/danielroe/beasties), and embeds those plans in the server bundle. At request (or prerender) time a Nitro plugin runs the zero-dependency `beasties/runtime` processor over the rendered HTML, which scans the markup in a single pass and inlines only the rules that can match.
+
+Because inlined component styles never become external CSS assets (and so can never be pruned), the module disables `features.inlineStyles`.
+
 ## Options
 
 You can override the `@nuxtjs/critters` defaults like this:
@@ -51,7 +55,6 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   modules: ['@nuxtjs/critters'],
   critters: {
-    // Options passed directly to beasties: https://github.com/danielroe/beasties#beasties-
     config: {
       // Default: 'media'
       preload: 'swap',
@@ -59,6 +62,29 @@ export default defineNuxtConfig({
   },
 })
 ```
+
+Supported `config` keys are the compiler's `allowRules` and `exact`, plus the runtime processor options: `preload`, `noscriptFallback`, `keyframes`, `fonts`, `inlineFonts`, `preloadFonts`, `cache`, `inlineThreshold` and `minimumExternalSize`.
+
+### Differences from classic beasties
+
+Some options of the classic (per-request, DOM-based) beasties API have no equivalent in the compiler + runtime pipeline:
+
+- `pruneSource` — the runtime does not rewrite the external stylesheet, so rules that were inlined are still served by it.
+- `path`, `publicPath`, `external`, `remote`, `additionalStylesheets`, `mergeStylesheets` — stylesheets are taken from the client build's emitted assets rather than resolved from the filesystem or network.
+- `reduceInlineStyles`, `compress`, `safeParser`, `logLevel`, `logger`, `dedupeWarnings` — parsing, minification and diagnostics all happen at build time, and compiler warnings are reported through the Nuxt logger.
+
+Two behaviours also differ:
+
+- `minimumExternalSize` is measured against the rules that were *not* inlined, i.e. what the external stylesheet would still need to provide, rather than against a rewritten external stylesheet.
+- `cache` defaults to being enabled only when the total compiled CSS is large enough that fingerprinting a document is cheaper than re-evaluating the plans. Set `cache: true` or `cache: false` to decide explicitly.
+
+## CSP nonces
+
+The module reads the per-request nonce from `event.context.security.nonce` and applies it to the `<style>` and `<script>` elements it injects. With [`nuxt-security`](https://nuxt-security.com) and its `nonce` support enabled, this needs no configuration.
+
+It has to happen here rather than in the module that generates the nonce: `nuxt-security` stamps nonces onto rendered tags in Nitro's `render:html` hook, which runs *before* the `render:response` hook where critical CSS is inlined, so anything injected there is invisible to that pass. When the event carries no nonce — during prerendering, for instance — nothing is added.
+
+beasties itself also accepts a `nonce` option, but it is not exposed here: a value fixed at build time is constant for the lifetime of the server, which defeats the point of a nonce.
 
 ## Development
 

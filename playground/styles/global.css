@@ -1,3 +1,27 @@
 body {
   background: darkgoldenrod;
 }
+
+.sample-animated {
+  animation: sample-fade 1s ease-in;
+}
+
+@keyframes sample-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes sample-unused-keyframes {
+  from { transform: none; }
+  to { transform: scale(2); }
+}
+
+@media (min-width: 100px) {
+  .sample-media-class {
+    color: white;
+  }
+
+  .sample-unused-media-class {
+    color: black;
+  }
+}
