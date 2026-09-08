@@ -3,7 +3,7 @@ packages:
 
 overrides:
   "@nuxt/schema": "4.5.2"
-  "@nuxtjs/critters": "link:./"
+  "@nuxtjs/critters": "workspace:*"
 
 allowBuilds:
   '@parcel/watcher': false
