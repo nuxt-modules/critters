@@ -51,7 +51,7 @@
     "@nuxt/eslint-config": "1.17.0",
     "@nuxt/module-builder": "1.0.3",
     "@nuxt/test-utils": "4.3.1",
-    "@nuxtjs/critters": "link:./",
+    "@nuxtjs/critters": "workspace:*",
     "@vitest/coverage-v8": "5.0.0",
     "bumpp": "12.3.0",
     "eslint": "10.10.0",
@@ -69,5 +69,16 @@
       "npx eslint --fix"
     ]
   },
-  "packageManager": "pnpm@11.25.0"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.0.0",
+      "onFail": "download"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.25.0",
+      "onFail": "download"
+    }
+  }
 }
