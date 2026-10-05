@@ -52,14 +52,14 @@
     "@nuxt/module-builder": "1.0.3",
     "@nuxt/test-utils": "4.3.3",
     "@nuxtjs/critters": "workspace:*",
-    "@vitest/coverage-v8": "5.0.2",
+    "@vitest/coverage-v8": "5.0.3",
     "bumpp": "12.3.0",
     "eslint": "10.11.0",
     "lint-staged": "17.6.0",
     "nuxt": "4.5.2",
     "pathe": "2.0.3",
     "simple-git-hooks": "2.14.0",
-    "vitest": "5.0.2"
+    "vitest": "5.0.3"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
