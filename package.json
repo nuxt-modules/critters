@@ -54,7 +54,7 @@
     "@nuxtjs/critters": "workspace:*",
     "@vitest/coverage-v8": "5.1.0",
     "bumpp": "12.3.0",
-    "eslint": "10.14.0",
+    "eslint": "10.15.0",
     "lint-staged": "17.6.0",
     "nuxt": "4.6.4",
     "pathe": "2.0.3",
