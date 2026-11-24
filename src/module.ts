@@ -50,6 +50,9 @@ export default defineNuxtModule<ModuleOptions>({
       if (!isClient) return
       config.plugins!.push({
         name: 'critters:collect-stylesheets',
+        // With `build.cssCodeSplit: false`, Vite emits the single CSS asset from the
+        // `generateBundle` hook of `vite:css-post`, which runs after normal plugins
+        enforce: 'post',
         generateBundle(_outputOptions, bundle) {
           for (const [fileName, asset] of Object.entries(bundle)) {
             if (asset.type !== 'asset' || !fileName.endsWith('.css')) continue
