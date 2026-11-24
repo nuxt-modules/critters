@@ -45,12 +45,16 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.features.inlineStyles = false
 
     const stylesheets = new Map<string, string>()
+    let clientBuilt = false
 
     nuxt.hook('vite:extendConfig', (config, { isClient }) => {
       if (!isClient) return
       config.plugins!.push({
         name: 'critters:collect-stylesheets',
         generateBundle(_outputOptions, bundle) {
+          if (this.environment?.config.consumer !== 'server') {
+            clientBuilt = true
+          }
           for (const [fileName, asset] of Object.entries(bundle)) {
             if (asset.type !== 'asset' || !fileName.endsWith('.css')) continue
             stylesheets.set(fileName, asset.source.toString())
@@ -115,7 +119,11 @@ export default defineNuxtModule<ModuleOptions>({
         },
       },
       load(id) {
-        if (id === '\0#critters') return renderPlans()
+        if (id !== '\0#critters') return
+        if (!clientBuilt) {
+          logger.warn('The server was bundled before the client build finished, so critical CSS will not be inlined.')
+        }
+        return renderPlans()
       },
     }, { client: false })
 
