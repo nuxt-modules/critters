@@ -1,6 +1,6 @@
 import { createRequire } from 'node:module'
 import { dirname } from 'node:path'
-import { addServerPlugin, createResolver, defineNuxtModule, useLogger } from '@nuxt/kit'
+import { addRendererPlugin, addVitePlugin, createResolver, defineNuxtModule, useLogger } from '@nuxt/kit'
 import { compileSheet, encodePlan } from 'beasties/compiler'
 import type { CompileOptions } from 'beasties/compiler'
 import type { ProcessorOptions } from 'beasties/runtime'
@@ -64,8 +64,7 @@ export default defineNuxtModule<ModuleOptions>({
       logger.warn('`critters.config.nonce` is not supported - the nonce is read from the request.')
     }
 
-    nuxt.options.nitro.virtual ||= {}
-    nuxt.options.nitro.virtual['#critters'] = () => {
+    const renderPlans = () => {
       const buildAssetsDir = withoutLeadingSlash(nuxt.options.app.buildAssetsDir)
       // `url()` references are rebased against this href, so it has to be
       // document-absolute or they resolve relative to the rendered route
@@ -96,6 +95,30 @@ export default defineNuxtModule<ModuleOptions>({
       ].join('\n')
     }
 
+    nuxt.options.nitro.virtual ||= {}
+    nuxt.options.nitro.virtual['#critters'] = renderPlans
+
+    let hasNitro = false
+    nuxt.hook('nitro:init', () => {
+      hasNitro = true
+    })
+
+    addVitePlugin({
+      name: 'critters:plans',
+      enforce: 'pre',
+      resolveId: {
+        order: 'pre',
+        handler(id) {
+          if (id !== '#critters') return
+          // Nitro bundles the server output once the client build has finished
+          return hasNitro ? { id, external: true } : '\0#critters'
+        },
+      },
+      load(id) {
+        if (id === '\0#critters') return renderPlans()
+      },
+    }, { client: false })
+
     const beastiesRuntime = createRequire(import.meta.url).resolve('beasties/runtime')
 
     nuxt.options.nitro.alias ||= {}
@@ -105,6 +128,9 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.nitro.externals.inline ||= []
     nuxt.options.nitro.externals.inline.push(dirname(beastiesRuntime))
 
-    addServerPlugin(resolver.resolve('./runtime/nitro-plugin'))
+    addRendererPlugin({
+      nuxt: resolver.resolve('./runtime/renderer-plugin'),
+      nitro2: resolver.resolve('./runtime/nitro-plugin'),
+    })
   },
 })

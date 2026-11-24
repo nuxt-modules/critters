@@ -13,7 +13,7 @@
 - Zero-configuration required
 - Stylesheets are compiled at build time, so no CSS parser or DOM is needed at runtime
 - Critical CSS automatically injected to page
-- Works with runtime SSR and Nitro prerendering
+- Works with runtime SSR and prerendering, with the Nitro server builder or (from Nuxt 4.7) the Vite server builder
 
 ## Quick setup
 
@@ -41,7 +41,7 @@ Nuxt has a number of ways to optimize your CSS in production:
 2. 📦 You can enable [`purgecss`](https://github.com/Developmint/nuxt-purgecss) to remove unused CSS rules from your bundle.
 3. ✅ with `@nuxtjs/critters` you can now extract CSS files and load them separately, just inlining the CSS necessary to render the page.
 
-At build time the module compiles every CSS asset emitted by the client build into a compact plan with [`beasties/compiler`](https://github.com/danielroe/beasties), and embeds those plans in the server bundle. At request (or prerender) time a Nitro plugin runs the zero-dependency `beasties/runtime` processor over the rendered HTML, which scans the markup in a single pass and inlines only the rules that can match.
+At build time the module compiles every CSS asset emitted by the client build into a compact plan with [`beasties/compiler`](https://github.com/danielroe/beasties), and embeds those plans in the server bundle. At request (or prerender) time a renderer plugin runs the zero-dependency `beasties/runtime` processor over the rendered HTML in the `render:document` hook, which scans the markup in a single pass and inlines only the rules that can match. On Nuxt versions without renderer plugins (before 4.7), a Nitro plugin does the same in the `render:response` hook.
 
 Because inlined component styles never become external CSS assets (and so can never be pruned), the module disables `features.inlineStyles`.
 
@@ -82,7 +82,7 @@ Two behaviours also differ:
 
 The module reads the per-request nonce from `event.context.security.nonce` and applies it to the `<style>` and `<script>` elements it injects. With [`nuxt-security`](https://nuxt-security.com) and its `nonce` support enabled, this needs no configuration.
 
-It has to happen here rather than in the module that generates the nonce: `nuxt-security` stamps nonces onto rendered tags in Nitro's `render:html` hook, which runs *before* the `render:response` hook where critical CSS is inlined, so anything injected there is invisible to that pass. When the event carries no nonce — during prerendering, for instance — nothing is added.
+It has to happen here rather than in the module that generates the nonce: `nuxt-security` stamps nonces onto rendered tags in the `render:html` hook, which runs *before* the hook where critical CSS is inlined, so anything injected there is invisible to that pass. When the event carries no nonce — during prerendering, for instance — nothing is added.
 
 beasties itself also accepts a `nonce` option, but it is not exposed here: a value fixed at build time is constant for the lifetime of the server, which defeats the point of a nonce.
 

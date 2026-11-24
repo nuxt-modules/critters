@@ -43,7 +43,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@nuxt/kit": "^4.0.0",
+    "@nuxt/kit": "^4.7.0",
     "beasties": "^0.5.2",
     "ufo": "^1.5.4"
   },
