@@ -2,7 +2,7 @@ packages:
   - playground
 
 overrides:
-  "@nuxt/schema": "4.6.4"
+  "@nuxt/schema": "4.7.0"
   "@nuxtjs/critters": "workspace:*"
 
 allowBuilds:
@@ -13,3 +13,11 @@ allowBuilds:
 
 minimumReleaseAgeExclude:
   - beasties@0.5.0 || 0.5.2
+  - "@nuxt/kit@4.7.0"
+  - "@nuxt/nitro-server@4.7.0"
+  - "@nuxt/nitro-v3-server@4.7.0"
+  - "@nuxt/schema@4.7.0"
+  - "@nuxt/vite-builder@4.7.0"
+  - "@nuxt/vite-server@4.7.0"
+  - nitropack@2.14.0
+  - nuxt@4.7.0
